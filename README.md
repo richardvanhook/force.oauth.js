@@ -1,8 +1,6 @@
 JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-Agent flow.
 
-[Run Unit Tests](https://force-oauth-js.herokuapp.com/test.html)
-
-### Usage
+## Usage
 
 ```html
 <script src='jquery.js' type='text/javascript'></script>
@@ -29,7 +27,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 </script>
 ```
 
-### Configuration Properties
+## Configuration Properties
 
 * **`clientId` (required)**
 
@@ -91,7 +89,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
   *Default:* undefined
 
 
-### Scenarios
+## Scenarios
 
 <table>
   <tr>
@@ -142,22 +140,22 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 The following screenshots diagram the scenarios enabled by this JS library.
 
-#### A: Popup window, without sessionStorage, fire on page load
+### A: Popup window, without sessionStorage, fire on page load
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
 
-#### B: Popup window, without sessionStorage, fire on user action
+### B: Popup window, without sessionStorage, fire on user action
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/b.png)
 
-#### C: Popup window, with sessionStorage, fire on page load
+### C: Popup window, with sessionStorage, fire on page load
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/c.png)
 
-#### D: Popup window, with sessionStorage, fire on user action
+### D: Popup window, with sessionStorage, fire on user action
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/d.png)
 
-#### E: Same window, with sessionStorage, fire on page load
+### E: Same window, with sessionStorage, fire on page load
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/e.png)
 
-#### F: Same window, with sessionStorage, fire on user action
+### F: Same window, with sessionStorage, fire on user action
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/f.png)
 
 
