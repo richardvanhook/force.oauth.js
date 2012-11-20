@@ -31,21 +31,21 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 ### Configuration Properties
 
-* **`:clientId` (required)**
+* **`clientId` (required)**
 
   Values must be generated via salesforce.com at Setup > App Setup > Develop > Remote Access. Only one remote access application is needed for production, sandbox, or pre-release; separate entries are not necessary for My Domain.
 
-* **`:authorized` (required)**
+* **`authorized` (required)**
 
   Function to be called once user is authorized.
 
-* **`:popup`**  (optional)
+* **`popup`**  (optional)
 
   Do OAuth handshake in popup window.
 
   *Default:* true
 
-* **`:unauthorized`**  (optional)
+* **`unauthorized`**  (optional)
 
   Function to be called if authorization shouldn't happen immediately.  For example, if you'd like wait until the user clicks a button before authorizing:
 
@@ -60,31 +60,31 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
   *Default:* undefined
 
-* **`:cacheTokenInSessionStorage`**  (optional)
+* **`cacheTokenInSessionStorage`**  (optional)
 
   Enabling this will persist the OAuth token in HTML5 sessionStorage.  **Please, please only enable this if you're positive your app has zero XSS/CSRF risks.**  The benefit, of course, is DOM reloads won't re-initiate OAuth hand-shake.
 
   *Default:* false
 
-* **`:scope`**  (optional)
+* **`scope`**  (optional)
 
   See [Scope Parameter Values](https://login.salesforce.com/help/doc/en/remoteaccess_oauth_scopes.htm)
 
   *Default:* 'id'
   
-* **`:loginUrl`**  (optional)
+* **`loginUrl`**  (optional)
 
   If you're testing against a sandbox, change this to https://test.salesforce.com
 
   *Default:* 'https://login.salesforce.com'
 
-* **`:callbackPath`**  (optional)
+* **`callbackPath`**  (optional)
 
   If you'd like one path in your app to handle all callbacks, set this to that path.  Prevents the need for multiple clientIds for a single app.
 
   *Default:* undefined
 
-* **`:error`**  (optional)
+* **`error`**  (optional)
 
   Function to receive callback errors if they occur; otherwise, errors will simply be thrown.
 
