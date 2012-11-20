@@ -94,12 +94,12 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 ### Scenarios
 
 <table>
-  <th>
-    <td>Scenario</td>
-    <td>Popup or Same window?</td>
-    <td>Cache Token in sessionStorage</td>
-    <td>Fire on page load or user action</td>
-  </th>
+  <tr>
+    <th>Scenario</th>
+    <th>Popup or Same window?</th>
+    <th>Cache Token in sessionStorage</th>
+    <th>Fire on page load or user action</th>
+  </tr>
   <tr>
     <td>A</td>
     <td>Popup</td>
