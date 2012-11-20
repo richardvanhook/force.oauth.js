@@ -138,17 +138,26 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
   </tr>
 </table>
 
-*NOTE:* two scenarios are not shown in the table above because they are invalid.
+*NOTE:* two scenarios - what would be G & H - are not shown in the table above because they are invalid.  To be more specific, to effectively use window.location.replace(), caching token in sessionStorage cannot be disabled.
 
 The following screenshots diagram the scenarios enabled by this JS library.
 
-<a id="scenario_a"></a> 
+#### A: Popup window, without sessionStorage, fire on page load
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
+
+#### B: Popup window, without sessionStorage, fire on user action
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/b.png)
+
+#### C: Popup window, with sessionStorage, fire on page load
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/c.png)
+
+#### D: Popup window, with sessionStorage, fire on user action
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/d.png)
+
+#### E: Same window, with sessionStorage, fire on page load
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/e.png)
-<a id="f"></a> 
+
+#### F: Same window, with sessionStorage, fire on user action
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/f.png)
 
 
