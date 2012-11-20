@@ -1,0 +1,123 @@
+Generated using http://www.websequencediagrams.com/#
+
+title Scenario A: Popup window, without sessionStorage, fire on page load
+
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->Popup: open()
+User->Login Form: credentials
+Login Form->Popup: foo.com/bar#access_token=...
+Popup->force.oauth.js: handle(token)
+force.oauth.js->Popup: close()
+force.oauth.js->Your Javascript: authorized(token)
+
+title Scenario B: Popup window, without sessionStorage, fire on user action
+
+User->Window: foo.com/bar
+Window->Your Javascript: ready
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->Your Javascript: unauthorized()
+Your Javascript->Window: append ui element
+User->Window: action
+Window->force.oauth.js: authorize()
+force.oauth.js->Popup: open()
+User->Login Form: credentials
+Login Form->Popup: foo.com/bar#access_token=...
+Popup->force.oauth.js: handle(token)
+force.oauth.js->Popup: close()
+force.oauth.js->Your Javascript: authorized(token)
+
+title Scenario C: Popup window, with sessionStorage, fire on page load
+
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: undefined
+force.oauth.js->Popup: open()
+User->Login Form: credentials
+Login Form->Popup: foo.com/bar#access_token=...
+Popup->force.oauth.js: handle(token)
+force.oauth.js->sessionStorage: setItem('token',token)
+force.oauth.js->Popup: close()
+force.oauth.js->Your Javascript: authorized(token)
+opt NOTE: use of sessionStorage means subsequent page reload doesn't trigger oauth flow
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: token
+force.oauth.js->Your Javascript: authorized(token)
+end
+
+title Scenario D: Popup window, with sessionStorage, fire on user action
+
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: undefined
+force.oauth.js->Your Javascript: unauthorized()
+Your Javascript->Window: append ui element
+User->Window: action
+Window->force.oauth.js: authorize()
+force.oauth.js->Popup: open()
+User->Login Form: credentials
+Login Form->Popup: foo.com/bar#access_token=...
+Popup->force.oauth.js: handle(token)
+force.oauth.js->sessionStorage: setItem('token',token)
+force.oauth.js->Popup: close()
+force.oauth.js->Your Javascript: authorized(token)
+opt NOTE: use of sessionStorage means subsequent page reload doesn't trigger oauth flow
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: token
+force.oauth.js->Your Javascript: authorized(token)
+end
+
+title Scenario E: Same window, with sessionStorage, fire on page load
+
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: undefined
+force.oauth.js->Window: redirect to Login Form
+User->Login Form: credentials
+Login Form->Window: redirect to foo.com/bar#access_token=...
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: setItem('token',token)
+force.oauth.js->Window: window.location.replace( 'foo.com/bar' )
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: token
+force.oauth.js->Your Javascript: authorized(token)
+
+title Scenario F: Same window, with sessionStorage, fire on user action
+
+User->Window: foo.com/bar
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: undefined
+force.oauth.js->Your Javascript: unauthorized()
+Your Javascript->Window: append ui element
+User->Window: action
+Window->force.oauth.js: authorize()
+force.oauth.js->Window: redirect to Login Form
+User->Login Form: credentials
+Login Form->Window: redirect to foo.com/bar#access_token=...
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: setItem('token',token)
+force.oauth.js->Window: window.location.replace( 'foo.com/bar' )
+Window->Your Javascript: ready()
+Your Javascript->force.oauth.js: ready(config)
+force.oauth.js->sessionStorage: getItem('token')
+sessionStorage->force.oauth.js: token
+force.oauth.js->Your Javascript: authorized(token)
