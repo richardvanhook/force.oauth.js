@@ -51,12 +51,12 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
   Example:
   ```html
-  unauthorized: function(){
-    var signInButton = $('<button></button>').html('Authenticate');
-    signInButton.click(function(){force.oauth.authorize();});
-    $('#chatter').append(signInButton);
-  }
-   ```
+    unauthorized: function(){
+      var signInButton = $('<button></button>').html('Authenticate');
+      signInButton.click(function(){force.oauth.authorize();});
+      $('#chatter').append(signInButton);
+    }
+  ```
 
   *Default:* undefined
 
