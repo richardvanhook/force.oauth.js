@@ -101,37 +101,37 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
     <th>Fire on page load or user action</th>
   </tr>
   <tr>
-    <td><a href="#scenario_a">A</a></td>
+    <td><a href="#a-popup-window-without-sessionstorage-fire-on-page-load">A</a></td>
     <td>Popup</td>
     <td>No</td>
     <td>page load</td>
   </tr>
   <tr>
-    <td>B</td>
+    <td><a href="#b-popup-window-without-sessionstorage-fire-on-user-action">B</a></td>
     <td>Popup</td>
     <td>No</td>
     <td>user action</td>
   </tr>
   <tr>
-    <td>C</td>
+    <td><a href="#c-popup-window-with-sessionstorage-fire-on-page-load">C</a></td>
     <td>Popup</td>
     <td>Yes</td>
     <td>page load</td>
   </tr>
   <tr>
-    <td>D</td>
+    <td><a href="#d-popup-window-with-sessionstorage-fire-on-user-action">D</a></td>
     <td>Popup</td>
     <td>Yes</td>
     <td>user action</td>
   </tr>
   <tr>
-    <td>E</td>
+    <td><a href="#e-same-window-with-sessionstorage-fire-on-page-load">E</a></td>
     <td>Same</td>
     <td>Yes</td>
     <td>page load</td>
   </tr>
   <tr>
-    <td>[F](#f)</td>
+    <td><a href="#f-same-window-with-sessionstorage-fire-on-user-action">F</a></td>
     <td>Same</td>
     <td>Yes</td>
     <td>user action</td>
