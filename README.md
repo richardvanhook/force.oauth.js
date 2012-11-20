@@ -27,6 +27,9 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 </script>
 ```
 
+## View Demo & Unit Tests
+[https://force-oauth-js.herokuapp.com/](https://force-oauth-js.herokuapp.com/)
+
 ## Configuration Properties
 
 * **`clientId` (required)**
