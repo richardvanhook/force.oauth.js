@@ -33,43 +33,67 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 * **`:clientId` (required)**
 
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Values must be generated via salesforce.com at Setup > App Setup > Develop > Remote Access. Only one remote access application is needed for production, sandbox, or pre-release; separate entries are not necessary for My Domain.
 
 * **`:authorized` (required)**
 
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Function to be called once user is authorized.
 
-* **`:unauthorized`**  (optional)
+* **`:popup`**  (optional)
 
-  *Default:* undefined
-
-* **`:cacheTokenInSessionStorage`**
-
-  *Default:* false
-
-* **`:scope`**
-
-  *Default:* 'id'
-  
-* **`:loginUrl`**
-
-  *Default:* 'https://login.salesforce.com'
-
-* **`:callbackPath`**
-
-  *Default:* undefined
-
-* **`:popup`**
+  Do OAuth handshake in popup window.
 
   *Default:* true
 
-* **`:error`**
+* **`:unauthorized`**  (optional)
+
+  Function to be called if authorization shouldn't happen immediately.  For example, if you'd like wait until the user clicks a button before authorizing:
+
+  Example:
+  ```html
+  unauthorized: function(){
+    var signInButton = $('<button></button>').html('Authenticate');
+    signInButton.click(function(){force.oauth.authorize();});
+    $('#chatter').append(signInButton);
+  }
+   ```
+
+  *Default:* undefined
+
+* **`:cacheTokenInSessionStorage`**  (optional)
+
+  Enabling this will persist token in HTML5 sessionStorage.  **Please, please only enable this if you're positive your app has zero XSS/CSRF risks.
+
+  *Default:* false
+
+* **`:scope`**  (optional)
+
+  See [Scope Parameter Values](https://login.salesforce.com/help/doc/en/remoteaccess_oauth_scopes.htm)
+
+  *Default:* 'id'
+  
+* **`:loginUrl`**  (optional)
+
+  If you're testing against a sandbox, change this to https://test.salesforce.com
+
+  *Default:* 'https://login.salesforce.com'
+
+* **`:callbackPath`**  (optional)
+
+  If you'd like one path in your app to handle all callbacks, set this to that path.  Prevents the need for multiple clientIds for a single app.
+
+  *Default:* undefined
+
+* **`:error`**  (optional)
+
+  Function to receive callback errors if they occur; otherwise, errors will simply be thrown.
 
   *Default:* undefined
 
 
-
 ### Scenarios
+
+The following screenshots diagram the scenarios enabled by this JS library.
 
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/b.png)
