@@ -142,11 +142,13 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 The following screenshots diagram the scenarios enabled by this JS library.
 
-<a id="a"></a> ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
+<a id="a"></a> 
+![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/b.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/c.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/d.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/e.png)
-<a id="f"></a> ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/f.png)
+<a id="f"></a> 
+![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/f.png)
 
 
