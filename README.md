@@ -103,12 +103,36 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
   <tr>
     <td>A</td>
     <td>Popup</td>
-    <td>Yes</td>
+    <td>No</td>
     <td>page load</td>
   </tr>
   <tr>
     <td>B</td>
     <td>Popup</td>
+    <td>No</td>
+    <td>user action</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>Popup</td>
+    <td>Yes</td>
+    <td>page load</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>Popup</td>
+    <td>Yes</td>
+    <td>user action</td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>Same</td>
+    <td>Yes</td>
+    <td>page load</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>Same</td>
     <td>Yes</td>
     <td>user action</td>
   </tr>
