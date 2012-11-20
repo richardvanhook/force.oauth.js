@@ -54,7 +54,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
     unauthorized: function(){
       var signInButton = $('<button></button>').html('Authenticate');
       signInButton.click(function(){force.oauth.authorize();});
-      $('#chatter').append(signInButton);
+      $('#mydiv').append(signInButton);
     }
   ```
 
@@ -62,7 +62,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 * **`:cacheTokenInSessionStorage`**  (optional)
 
-  Enabling this will persist token in HTML5 sessionStorage.  **Please, please only enable this if you're positive your app has zero XSS/CSRF risks.
+  Enabling this will persist the OAuth token in HTML5 sessionStorage.  **Please, please only enable this if you're positive your app has zero XSS/CSRF risks.**  The benefit, of course, is DOM reloads won't re-initiate OAuth hand-shake.
 
   *Default:* false
 
