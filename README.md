@@ -93,6 +93,27 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 ### Scenarios
 
+<table>
+  <th>
+    <td>Scenario</td>
+    <td>Popup or Same window?</td>
+    <td>Cache Token in sessionStorage</td>
+    <td>Fire on page load or user action</td>
+  </th>
+  <tr>
+    <td>A</td>
+    <td>Popup</td>
+    <td>Yes</td>
+    <td>page load</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Popup</td>
+    <td>Yes</td>
+    <td>user action</td>
+  </tr>
+</table>
+
 The following screenshots diagram the scenarios enabled by this JS library.
 
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
