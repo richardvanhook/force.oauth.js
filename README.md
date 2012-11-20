@@ -101,7 +101,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
     <th>Fire on page load or user action</th>
   </tr>
   <tr>
-    <td><a href="#a">A</a></td>
+    <td><a href="#scenario_a">A</a></td>
     <td>Popup</td>
     <td>No</td>
     <td>page load</td>
@@ -142,7 +142,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
 
 The following screenshots diagram the scenarios enabled by this JS library.
 
-<a id="a"></a> 
+<a id="scenario_a"></a> 
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/b.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/c.png)
