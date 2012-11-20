@@ -101,7 +101,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
     <th>Fire on page load or user action</th>
   </tr>
   <tr>
-    <td>A</td>
+    <td><a href="#a">A</a></td>
     <td>Popup</td>
     <td>No</td>
     <td>page load</td>
@@ -131,20 +131,22 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
     <td>page load</td>
   </tr>
   <tr>
-    <td>F</td>
+    <td><a href="#f">F</a></td>
     <td>Same</td>
     <td>Yes</td>
     <td>user action</td>
   </tr>
 </table>
 
+*NOTE:* two scenarios are not shown in the table above because they are invalid.
+
 The following screenshots diagram the scenarios enabled by this JS library.
 
-![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
+<a id="a"></a> ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/a.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/b.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/c.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/d.png)
 ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/e.png)
-![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/f.png)
+<a id="f"></a> ![ScreenShot](https://raw.github.com/richardvanhook/force.oauth.js/master/scenarios/f.png)
 
 
