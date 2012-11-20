@@ -131,7 +131,7 @@ JS Library for apps wishing to authenticate with force.com using OAuth 2.0 User-
     <td>page load</td>
   </tr>
   <tr>
-    <td><a href="#f">F</a></td>
+    <td>[F](#f)</td>
     <td>Same</td>
     <td>Yes</td>
     <td>user action</td>
